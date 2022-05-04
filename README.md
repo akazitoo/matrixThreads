@@ -13,7 +13,7 @@
 
 ## 📝 Process
 
-step by step on how to perform a sum of numbers from the matrix using multiple threads.
+step by step on how to perform a sum of numbers from the matrix using **multiple threads**.
 
 ---
 
