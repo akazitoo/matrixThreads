@@ -5,7 +5,7 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void *sum(void *args);
 int x;
-int sum_array = 0;
+int sum_matrix = 0;
 
 int main(){
         int matrix[99][99];
@@ -22,7 +22,7 @@ int main(){
         for(int temp = 0; temp < x; temp++){
                 pthread_join(threads[temp], NULL);
         }
-        printf("%d\n", sum_array/x);
+        printf("%d\n", sum_matrix/x);
         return 0;
 }
 void *sum(void *args){
@@ -30,7 +30,7 @@ void *sum(void *args){
 	int *p = (int*)args;
 	for(int i = 0; i < x; i++){
 		for (int j = 0; j < x; j++){
-		        sum_array += p[i];
+		        sum_matrix += p[i];
 	        }
         }
         pthread_mutex_unlock(&mutex);
